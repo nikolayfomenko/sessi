@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <style type="text/css">
+
+	          @font-face{
+	            font-family: kolivan;
+	           src: url("17688.otf");
+	           font-family: cifri;
+	           src: url("class.ttf");
+	          }
+	          .header{
+	          	height: 700px;
+
+	          	background:#6bc99d;
+	          	background-size: 100% 100%;
+
+	          }
+
+
+
+	      .menu-list a:hover {
+	        color:#00ff51; /* Цвет ссылки при наведении на нее курсора мыши */  
+	        font-size: 27px;
+
+	      }
+	      
+	    .glav h1{
+	    	margin-left: 100px;
+	    	padding-top: 4px;
+	    	color: white; 
+	    	font-weight: lighter;
+	    }
+		.glav1 a {
+		    display: inline-block;
+		    color: white;
+		    line-height: 1;
+		    text-decoration:none;
+		    cursor: pointer;
+		    font-size: 25px;
+		    margin-top: 14px;
+		    margin-left: 100px;
+		    font-weight: 200;
+		}
+		.glav1 a:after {
+		    background-color: #ffeb3b;
+		    display: block;
+		    content: "";
+		    height: 2px;
+		    width: 0%;
+		    -webkit-transition: width .3s ease-in-out;
+		    -moz--transition: width .3s ease-in-out;
+		    transition: width .3s ease-in-out;
+		}
+		.glav1 a:hover:after,
+		.glav1 a:focus:after {
+		    width: 100%;
+		}
+		.wrapper {
+		  position: relative;
+		  overflow-x: hidden;
+		}
+		.menu {
+		  position: fixed;
+		  left: 0;
+		  top: 0;
+		  z-index: 99;
+		  width: 15%;
+		  height: 100vh;
+		  display: flex;
+		  background-color: black;
+		  transition: 0.6s;
+		  transform: translateX(-100%);
+		}
+		.menu_active {
+		  transform: translateX(0%);
+		  background: #0B3861;
+		}
+		.menu-list {
+		  display: flex;
+		  justify-content: space-around;
+		  height: 50%;
+		  flex-direction: column;
+		
+		}
+		.menu-list a {
+		  text-decoration: none;
+		  text-transform: 
+		  font-weight: 100;
+		  transition: all 0.2s ease;
+	      -webkit-transition: all 0.2s ease;
+	      -moz-transition: all 0.2s ease;
+	      -o-transition: all 0.2s ease;
+	      -ms-transition: all 0.2s ease;
+	      text-decoration: none;
+	      font-family: kolivanfo;
+	      margin-left: 40px;
+	        margin-top: 10px;
+	        font-size: 25px;
+	        color: white;
+	        font-weight: 200;
+		}
+		.menu-btn {
+		  width: 40px;
+		  height: 40px;
+		  position: absolute;
+		  right: -50px;
+		  top: 150px;
+		}
+		.content {
+		  transition: 0.5s;
+		  position: relative;
+		  z-index: 0;
+		}
+		.content_active {
+		  transform: translateX(30%);
+		}
+		.texts{
+			padding: 8em 0;
+  			text-align: center;
+  			color: white;
+		}
+		.texts h2{
+			font-size: 50px;
+			
+			
+		}
+		.logo{
+			border-radius: 100px; /* Радиус скругления * /* Параметры рамки */
+    		box-shadow: 0 0 7px #666;
+    		margin-top: 1px;
+		}
+		.prie h1{
+			margin-right: auto;
+			color: white;
+			font-weight: normal;
+			font-weight: lighter;
+			margin-bottom: 50px;			
+		}
+		.prie h3{
+			font-weight:lighter;
+			color: white;
+
+		}
+		.prieka{
+			justify-content: space-between;
+  			align-content: space-around;
+  			text-align: center;
+  			margin-bottom: 250px;
+		}
+							/* Dropdown Button */
+			.dropbtn {
+
+			    color: white;
+
+			    border: none;text-decoration:none;
+			}
+
+			/* The container <div> - needed to position the dropdown content */
+			.dropdown {
+			    position: relative;
+			    display: inline-block;
+			       	    display: inline-block;
+		    line-height: 1;
+		    text-decoration:none;
+		    cursor: pointer;
+		    font-size: 25px;
+		    margin-top: 14px;
+		    margin-left: 100px;
+		    font-weight: 200;
+			}
+
+			/* Dropdown Content (Hidden by Default) */
+			.dropdown-content {
+			    display: none;
+			    position: absolute;
+			    background-color: #f1f1f1;
+		    font-size: 25px;
+			    z-index: 1;
+			    text-decoration:none;
+			    min-width: 160px;
+			}
+
+			/* Links inside the dropdown */
+			.dropdown-content a {
+			    color: black;
+			    margin-right: 0px;
+			    text-decoration: none;
+			    display: block;
+			    margin-right: 50px;
+			    	    display: inline-block;
+		    line-height: 1;
+		    text-decoration:none;
+		    cursor: pointer;
+		    font-size: 25px;
+
+		    margin-top: 20px;
+		    font-weight: 200;
+			}
+			.shrink{
+				  -webkit-transition: all 0.3s ease;;
+  -moz-transition: all 0.3s ease;;
+  -o-transition: all 0.3s ease;;
+  transition: all 0.3s ease;
+			}
+			.shrink:hover {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+}
+
+			/* Change color of dropdown links on hover */
+			.dropdown-content a:hover {background-color: #ddd;}
+
+			/* Show the dropdown menu on hover */
+			.dropdown:hover .dropdown-content {display: block;}
+
+			/* Change the background color of the dropdown button when the dropdown content is shown */
+			.dropdown:hover .dropbtn {text-decoration: none;}
+    </style>
+
+  </head>
+
+  <body style="background:#ebebeb;">
+  	<div class="">
+  		<div class="menu">
+    		<a href="#" class="menu-btn">
+    			<img src="minu.png" class="w-100">
+    		</a>
+    	<nav class="menu-list">
+    		<div style="height: 60px;width: 60px;margin-left: 70px;">
+  				<img src="logo.jpeg" class="w-100 logo">
+  			</div>
+      		<a href="#">Мой кабинет</a>
+      		<a href="#">Рейтинг</a>
+      		<a href="#">Регистрация</a>
+      		<a href="#">Вход</a>
+    	</nav>
+  	</div>
+  	<div class="header">
+  		<div class=" glav row" style="height: 50px;">
+  			<div class="glav1 row">
+  				<h1 class="">Олимпийки</h1>
+  				<a href="glavnaya.html">Главная</a>
+  			</div>
+					<div class="dropdown">
+					  <a href="katego.html" class="dropbtn">Классы</a>
+					  <div class="dropdown-content">
+					    <a href="katego5.html">5 класс</a>
+					    <a href="katego6.html">6 класс</a>
+					    <a href="katego7.html">7 класс</a>
+					    <a href="katego8.html">8 класс</a>
+					  </div>
+			</div>
+			<div class="glav1 row">
+				 <a href="">Расписание</a>
+				<a href="">Блог</a>
+			</div>
+  		</div>
+  		<div class="bg-white row" style="height: 80px; margin:100px;">
+  			<div class="col-3  shrink " style=" border: solid #4682B4  4px ;">
+  				<div class="row">
+  					 <div class=" mt-3 ml-3" style="height: 50px; width: 50px;">
+  					 	<img src="mat.png" class="w-100">
+  					 </div>
+  					 <a href="math7.html" style="text-decoration: none; color: black;">
+  					 	<h3 class="mt-4 ml-3" >Математика</h3>
+  					 </a>
+  				</div>  			
+  			</div>
+  			<div class="col-3 shrink " style=" border: solid #4682B4  4px ;">
+  				<div class="row">
+  					 <div class=" mt-3 ml-3" style="height: 50px; width: 50px;">
+  					 	<img src="rus.png" class="w-100">
+  					 </div>
+  					<h3 class="mt-4 ml-3">Русский язык</h3>
+  				</div> 
+  			</div>
+  			<div class="col-3 shrink " style=" border: solid #4682B4  4px ;">
+  				<div class="row">
+  					 <div class=" mt-3 ml-3" style="height: 50px; width: 50px;">
+  					 	<img src="eng.png" class="w-100">
+  					 </div>
+  					<h3 class="mt-4 ml-3">Английский язык</h3>
+  				</div> 
+  			</div>
+  			<div class="col-3 shrink " style=" border: solid #4682B4  4px ;">
+  				<div class="row">
+  					 <div class=" mt-3 ml-3" style="height: 50px; width: 50px;">
+  					 	<img src="inf.png" class="w-100">
+  					 </div>
+  					<h3 class="mt-4 ml-3">Информатика</h3>
+  				</div> 
+  			</div>
+  		</div>
+  		
+  
+
+<script type="text/javascript">
+	$('.menu-btn').on('click', function(e) {
+  		e.preventDefault();
+  		$('.menu').toggleClass('menu_active');
+  		$('.content').toggleClass('content_active');
+})
+</script>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <style type="text/css">
+
+	          @font-face{
+	            font-family: kolivan;
+	           src: url("17688.otf");
+	           font-family: cifri;
+	           src: url("class.ttf");
+	          }
+	          .header{
+	          	
+
+	          	background:#534678;
+	          	background-size: 100% 100%;
+
+	          }
+
+
+
+	      .menu-list a:hover {
+	        color:#00ff51; /* Цвет ссылки при наведении на нее курсора мыши */  
+	        font-size: 27px;
+
+	      }
+	      
+	    .glav h1{
+	    	margin-left: 100px;
+	    	padding-top: 4px;
+	    	color: white; 
+	    	font-weight: lighter;
+	    }
+		.glav1 a {
+		    display: inline-block;
+		    color: white;
+		    line-height: 1;
+		    text-decoration:none;
+		    cursor: pointer;
+		    font-size: 25px;
+		    margin-top: 14px;
+		    margin-left: 100px;
+		    font-weight: 200;
+		}
+		.glav1 a:after {
+		    background-color: #ffeb3b;
+		    display: block;
+		    content: "";
+		    height: 2px;
+		    width: 0%;
+		    -webkit-transition: width .3s ease-in-out;
+		    -moz--transition: width .3s ease-in-out;
+		    transition: width .3s ease-in-out;
+		}
+		.glav1 a:hover:after,
+		.glav1 a:focus:after {
+		    width: 100%;
+		}
+		.wrapper {
+		  position: relative;
+		  overflow-x: hidden;
+		}
+		.menu {
+		  position: fixed;
+		  left: 0;
+		  top: 0;
+		  z-index: 99;
+		  width: 15%;
+		  height: 100vh;
+		  display: flex;
+		  background-color: black;
+		  transition: 0.6s;
+		  transform: translateX(-100%);
+		}
+		.menu_active {
+		  transform: translateX(0%);
+		  background: #0B3861;
+		}
+		.menu-list {
+		  display: flex;
+		  justify-content: space-around;
+		  height: 50%;
+		  flex-direction: column;
+		
+		}
+		.menu-list a {
+		  text-decoration: none;
+		  text-transform: 
+		  font-weight: 100;
+		  transition: all 0.2s ease;
+	      -webkit-transition: all 0.2s ease;
+	      -moz-transition: all 0.2s ease;
+	      -o-transition: all 0.2s ease;
+	      -ms-transition: all 0.2s ease;
+	      text-decoration: none;
+	      font-family: kolivanfo;
+	      margin-left: 40px;
+	        margin-top: 10px;
+	        font-size: 25px;
+	        color: white;
+	        font-weight: 200;
+		}
+		.menu-btn {
+		  width: 40px;
+		  height: 40px;
+		  position: absolute;
+		  right: -50px;
+		  top: 150px;
+		}
+		.content {
+		  transition: 0.5s;
+		  position: relative;
+		  z-index: 0;
+		}
+		.content_active {
+		  transform: translateX(30%);
+		}
+		.texts{
+			padding: 8em 0;
+  			text-align: center;
+  			color: white;
+		}
+		.texts h2{
+			font-size: 50px;
+			
+			
+		}
+		.logo{
+			border-radius: 100px; /* Радиус скругления * /* Параметры рамки */
+    		box-shadow: 0 0 7px #666;
+    		margin-top: 1px;
+		}
+		.prie h1{
+			margin-right: auto;
+			color: white;
+			font-weight: normal;
+			font-weight: lighter;
+			margin-bottom: 50px;			
+		}
+		.prie h3{
+			font-weight:lighter;
+			color: white;
+
+		}
+		.prieka{
+			justify-content: space-between;
+  			align-content: space-around;
+  			text-align: center;
+  			margin-bottom: 250px;
+		}
+							/* Dropdown Button */
+			.dropbtn {
+
+			    color: white;
+
+			    border: none;text-decoration:none;
+			}
+
+			/* The container <div> - needed to position the dropdown content */
+			.dropdown {
+			    position: relative;
+			    display: inline-block;
+			       	    display: inline-block;
+		    line-height: 1;
+		    text-decoration:none;
+		    cursor: pointer;
+		    font-size: 25px;
+		    margin-top: 14px;
+		    margin-left: 100px;
+		    font-weight: 200;
+			}
+
+			/* Dropdown Content (Hidden by Default) */
+			.dropdown-content {
+			    display: none;
+			    position: absolute;
+			    background-color: #f1f1f1;
+		    font-size: 25px;
+			    z-index: 1;
+			    text-decoration:none;
+			    min-width: 160px;
+			}
+
+			/* Links inside the dropdown */
+			.dropdown-content a {
+			    color: black;
+			    margin-right: 0px;
+			    text-decoration: none;
+			    display: block;
+			    margin-right: 50px;
+			    	    display: inline-block;
+		    line-height: 1;
+		    text-decoration:none;
+		    cursor: pointer;
+		    font-size: 25px;
+
+		    margin-top: 20px;
+		    font-weight: 200;
+			}
+						.shrink{
+							  -webkit-transition: all 0.3s ease;;
+			  -moz-transition: all 0.3s ease;;
+			  -o-transition: all 0.3s ease;;
+			  transition: all 0.3s ease;
+						}
+						.shrink:hover {
+			  -webkit-transform: scale(0.7);
+			  -ms-transform: scale(0.7);
+			  transform: scale(0.7);
+			}
+
+			/* Change color of dropdown links on hover */
+			.dropdown-content a:hover {background-color: #ddd;}
+
+			/* Show the dropdown menu on hover */
+			.dropdown:hover .dropdown-content {display: block;}
+
+			/* Change the background color of the dropdown button when the dropdown content is shown */
+			.dropdown:hover .dropbtn {text-decoration: none;}
+
+			.lenta{
+				background: orange;
+				margin-top: 30px;
+			}
+    </style>
+
+  </head>
+
+  <body style="background:#ebebeb;">
+  	<div class="">
+  		<div class="menu">
+    		<a href="#" class="menu-btn">
+    			<img src="minu.png" class="w-100">
+    		</a>
+    	<nav class="menu-list">
+    		<div style="height: 60px;width: 60px;margin-left: 70px;">
+  				<img src="logo.jpeg" class="w-100 logo">
+  			</div>
+      		<a href="#">Мой кабинет</a>
+      		<a href="#">Рейтинг</a>
+      		<a href="#">Регистрация</a>
+      		<a href="#">Вход</a>
+    	</nav>
+  	</div>
+  	<div class="header">
+  		<div class=" glav row" style="height: 50px;">
+  			<div class="glav1 row">
+  				<h1 class="">Олимпийки</h1>
+  				<a href="glavnaya.html">Главная</a>
+  			</div>
+					<div class="dropdown">
+					  <a href="katego.html" class="dropbtn">Классы</a>
+					  <div class="dropdown-content">
+					    <a href="katego5.html">5 класс</a>
+					    <a href="katego6.html">6 класс</a>
+					    <a href="katego7.html">7 класс</a>
+					    <a href="katego8.html">8 класс</a>
+					  </div>
+			</div>
+			<div class="glav1 row">
+				 <a href="">Расписание</a>
+				<a href="">Блог</a>
+			</div>
+  		</div>
+
+  		<div class="container lenta pt-3 pl-0 pr-0">
+  			<div class="bg-warning " style=" text-align: center;">
+				 <h1>Основные виды и методы решения задач по математике </h1>
+				 <h4>5 класс:</h4>
+				 <a href="#yak1">
+					<p>1. Числовые ребусы </p>
+				</a>
+				<a href="#yak2">
+				  	<p>2. Четность Нечетность 🧮</p>				
+				</a>
+				<a href="#yak3">
+				  	<p>3.  Монеты 💰</p>		
+				</a>
+				<a href="#yak4">
+				  	<p>4.  Разрезание 🔪</p>	
+				</a>
+				<a href="#yak5">
+					<p>5.Рыцари и Лжецы</p>
+			</a>
+			</div>
+			<div style="height: 400px; background: red;" class="mt-5 " id="yak1">
+				<div class="row ">
+					<div  class="col-6">
+						<h1 >Числовые ребусы</h1>
+									<p>К числовым ребусам можно отнести арифметические
+						равенства. В последних все или некоторые цифры заменены буквами
+						(или значками в числовых ребусах) какого-либо одного или
+						различных алфавитов (включая системы счисления). Подобные
+						ребусы представляют собой логико-математические задачи, в которых
+						путем логических рассуждений и математических вычислений
+						требуется расшифровать значение каждого символа и восстановить
+						числовую запись. Причем перемена цифр (букв) чисел слева от
+						равенства между собой, как правило, не является новым решением
+						(при отсутствии ограничений).
+						</p>
+					</div>
+					<div class="col-6">
+						<iframe width="500" height="200"  style="margin-top: 100px;"  src="https://www.youtube.com/embed/aan-ql88Xpo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+			<div style="height: 430px; background: red;" class="mt-5" id="yak2">
+				<div class="row ">
+					<div  class="col-6">
+						<h1 > Четность Не четность</h1>
+							<p>Четные числа - это те, которые делятся на 2 без остатка (например, 2, 4, 6 и т.п.). Каждое такое число можно записать в виде 2*K, подобрав подходящее целое K (например, 4 = 2 х 2, 6 = 2 х 3, и т.д.).
+Нечетные числа - это те, которые при делении на 2 дают в остатке 1 (например, 1, 3, 5 и т.п.). Каждое такое число можно записать в виде 2*K + 1, подобрав подходящее целое K (например, 3 = 2 х 1 + 1, 5 = 2 х 2 + 1, и т.д.).
+
+Сложение и вычитание:
+Чётное ± Чётное = Чётное
+Чётное ± Нечётное = Нечётное
+Нечётное ± Чётное = Нечётное
+Нечётное ± Нечётное = Чётное
+
+Умножение:
+Чётное × Чётное = Чётное
+Чётное × Нечётное = Чётное
+Нечётное × Нечётное = Нечётное
+
+Рассмотрим также  свойства четных и нечетных чисел, важные для решения задач.
+1. Если хотя бы один множитель произведения двух (или нескольких) чисел четен, то и все произведение четно.
+2. Если каждый множитель произведения двух (или нескольких) чисел нечетен, то и все произведение нечетно.
+3. Сумма любого количества четных чисел — число четное.
+4. Сумма четного и нечетного чисел — число нечетное.
+5. Сумма любого количества нечетных чисел — число четное, если число слагаемых четно, и нечетное, если число слагаемых нечетно.
+В справедливости этих свойств мы убедимся при решении задач.</p>
+					</div>
+					<div class="col-6" style="margin-top: 200px;">
+						<a href="" >
+							http://www.seznaika.ru/matematika/olimpiada/2064-2010-08-01-08-37-11
+						</a>
+						
+					</div>
+				</div>
+			</div>
+			<div style="height: 400px; background: red;" class="mt-5 " id="yak3">
+				<div class="row ">
+					<div  class="col-6">
+						<h1 > Монеты</h1>
+									<p>Задачи на взвешивание –
+
+достаточно распространённый вид математических задач.
+
+В таких задачах от решающего требуется локализовать отличающийся от остальных предмет по весу за ограниченное число взвешиваний.
+
+Поиск решения в этом случае осуществляется путем операций сравнения, правда, не только одиночных элементов, но и групп элементов между собой.
+						</p>
+					</div>
+					<div class="col-6">
+						<iframe width="500" height="200" style="margin-top: 100px;" src="https://www.youtube.com/embed/AKOfDZpfyZc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					</div>
+				</div>
+			</div>
+			<div style="height: 400px; background: red;" class="mt-5 " id="yak4">
+				<div class="row ">
+					<div  class="col-6">
+						<h1 >Разрезание</h1>
+						<p>Решение головоломок, которые называются «задачи на разрезание», сродни собиранию пазлов. Пазлы любят все — и дети и взрослые. Это увлекательное занятие развивает усидчивость, внимательность, аккуратность. Но в отличие от пазлов, где картинка собирается методом подбора готовых элементов, в задачах на разрезание нужно ещё самому создать элементы из заданной фигуры и только после этого сложить из них новую.
+
+Задачи на разрезание посложнее пазлов. Тут не обойтись без логического и пространственного мышления, а также зоркого глаза, чтобы в одном рисунке увидеть два и более изображений. Например, разрезав квадрат на две части по диагонали, можно сложить равнобедренный треугольник. Это, конечно, одна из самых простых задач. Можно разрезать квадрат на три части так, чтобы сложить из них прямоугольник. Впрочем, и эта задачка не из трудных.</p>
+					</div>
+					<div class="col-6">
+						<iframe width="500" height="200" style="margin-top: 100px;" src="https://www.youtube.com/embed/3jnu4E57fkI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						 <a href="http://ilib.mccme.ru/pdf/kukin.pdf" download>Скачать файл-архив</a>
+					</div>
+				</div>
+			</div>
+			<div style="height: 400px; background: red;" class="mt-5 " id="yak5">
+				<div class="row ">
+					<div  class="col-6">
+						<h1 >Рыцари и Лжецы</h1>
+									<p>Задачи о рыцарях и лжецах — разновидность математических задач, в которых фигурируют персонажи:
+
+Лжец (плут, вампир, сумасшедший, оборотень, упырь) — человек (или иное существо), всегда говорящий ложь.
+и его антагонист
+
+Рыцарь (человек, правдец), всегда говорящий правду.
+Решение подобных задач обычно сводится к перебору вариантов с исключением тех, которые приводят к противоречию.
+
+Существуют задачи с тремя типами персонажей — рыцари, лжецы и нормальные люди (вариант - шпионы). Последние могут как лгать, так и говорить правду (например: самая сложная логическая задача).
+
+Также существуют целые классы задач того же типа, но с другими персонажами — задачи о пациентах и врачах, задачи об упырях, собранные в частности в книгах математика Рэймонда М. Смаллиана.</p>
+					</div>
+					<div class="col-6">
+						<iframe width="500" height="200" style="margin-top: 100px;" src="https://www.youtube.com/embed/XfW3d2QhpIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+
+
+<script type="text/javascript">
+	$('.menu-btn').on('click', function(e) {
+  		e.preventDefault();
+  		$('.menu').toggleClass('menu_active');
+  		$('.content').toggleClass('content_active');
+})
+</script>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
